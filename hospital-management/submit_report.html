@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+select, input[type="date"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+    </style>
+</head>
+
+<body>
+    <form method="post" action="submit_report.php">
+        <label for="measurement_type">Measurement Type:</label>
+        <select id="measurement_type" name="measurement_type">
+            <option value="Blood Pressure">Blood Pressure</option>
+            <option value="Blood Sugar">Blood Sugar</option>
+            <option value="Temperature">Temperature</option>
+        </select>
+        <br>
+        <label for="measurement_date">Measurement Date:</label>
+        <input type="date" id="measurement_date" name="measurement_date">
+        <br>
+        <label for="measurement_date">Measurement Value:</label>
+        <input type="number" id="measurement_value" name="measurement_value">
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
